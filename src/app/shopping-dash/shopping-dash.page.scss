@@ -1,0 +1,18 @@
+swiper-container {
+    width: 100%;
+    // height: 180px;
+    --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #999999);
+    --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+  }
+  swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg-footer{
+    // --background: linear-gradient(90deg, #ffda22 0%, #ffba1a 100%);
+    background-image: linear-gradient(to right,  #ffda22 0%, #ffba1a 100%);
+
+  }

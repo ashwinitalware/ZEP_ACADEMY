@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button color="light"></ion-back-button>
+      </ion-buttons>
+      <ion-title color="light">My Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let cartItem of allcartdata" class="border-b border-dashed border-gray-200">
+      <ion-col size="3">
+        <div class=" rounded-md p-2">
+          <img class="rounded-md" [src]="cartItem.completeImageUrl || 'assets/default-thumbnail.png'" alt="Course Thumbnail">
+
+        </div>
+      </ion-col>
+      <ion-col size="8">
+        <div class="p-1">
+          <p class="text-black font-bold text-sm mt-1">{{ cartItem.course_name }}</p>
+          <p>₹{{ cartItem.sellingPrice }} - Qty {{ cartItem.quantity }}</p>
+          <p class="mt-3 text-black text-md border-t border-blue-300 border-dashed pt-2"><b>Total :</b> ₹ {{ cartItem.course_price }}</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="1">
+        <div class="text-right mt-3" (click)="removeCartItem(cartItem)">
+          <ion-icon class="text-lg text-red-600 pr-1" name="trash"></ion-icon>
+        </div>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-button id="open-modal" expand="block">Open Modal</ion-button> -->
+
+  <div class="p-4">
+    <ion-modal #modal trigger="open-modal" class="p-8">
+      <ng-template>
+        <ion-content>
+         <div align="center" class="text-lg text-green-600 font-bold">
+          <img class="mt-8" src="assets/atm-card.png" alt="">
+          <p class="mt-2 text-xl">Payment Gateway</p>
+          <ion-button class="mt-3" size="small" color="danger" (click)="modal.dismiss()">Close</ion-button>
+         </div>
+          
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="tertiary">
+    <div class="flex justify-between pl-3 pr-3">
+      <div class="mt-1">
+        <p> Total : ₹ {{ grandTotal }}</p>
+      </div>
+      <div>
+        <ion-button size="small" color="light" id="open-modal">Place Order</ion-button>
+      </div>
+      <!-- routerLink="/suceess" -->
+    </div>
+  </ion-toolbar>
+</ion-footer>
+

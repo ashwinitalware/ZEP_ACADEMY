@@ -1,0 +1,279 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-md text-white">Income</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="p-2">
+    <ion-segment mode="ios" value="fore" (ionChange)="segmentChanged($event)" class="bg-amber-400">
+      <ion-segment-button value="fore">
+        <ion-label class="font-bold">Forecast</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="total">
+        <ion-label class="font-bold">Total Income</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div *ngIf="switchTab === 'fore'">
+      <div class="p-1">
+        <div class="bg-gray-50 rounded-md" align="center">
+          <ion-icon name="wallet-outline"></ion-icon>
+          <p class="text-black font-bold text-sm">Total Forecast</p>
+          <p>₹ 1000</p>
+        </div>
+
+        <div class="mt-2">
+          <ion-grid class="mt-3">
+            <p class="text-md font-bold mb-1">Level 1</p>
+            <ion-row class="bg-gray-200">
+              <ion-col size="1">
+                <p class="text-xs font-bold text-black">No.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs font-bold text-black">Name</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Sponcer ID</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs font-bold text-black">Amount</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Date</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Ashwini Talware</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 1000</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Nita Patil</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 800</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-grid class="mt-3">
+            <p class="text-md font-bold mb-1">Level 2</p>
+            <ion-row class="bg-gray-200">
+              <ion-col size="1">
+                <p class="text-xs font-bold text-black">No.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs font-bold text-black">Name</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Sponcer ID</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs font-bold text-black">Amount</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Date</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Ashwini Talware</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 1000</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Nita Patil</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 800</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="switchTab === 'total'">
+      <div class="p-1">
+        <div class="bg-gray-50 rounded-md" align="center">
+          <ion-icon name="wallet-outline"></ion-icon>
+          <p class="text-black font-bold text-sm">Total Income</p>
+          <p>₹ 5000</p>
+        </div>
+
+        <div class="mt-2">
+          <ion-grid class="mt-3">
+            <p class="text-md font-bold mb-1">Level 1</p>
+            <ion-row class="bg-gray-200">
+              <ion-col size="1">
+                <p class="text-xs font-bold text-black">No.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs font-bold text-black">Name</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Sponcer ID</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs font-bold text-black">Amount</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Date</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Ashwini Talware</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 1000</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Nita Patil</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 800</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-grid class="mt-3">
+            <p class="text-md font-bold mb-1">Level 2</p>
+            <ion-row class="bg-gray-200">
+              <ion-col size="1">
+                <p class="text-xs font-bold text-black">No.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs font-bold text-black">Name</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Sponcer ID</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs font-bold text-black">Amount</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs font-bold text-black">Date</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Ashwini Talware</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 1000</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="border-b border-gray-200">
+              <ion-col size="1">
+                <p class="text-xs  text-black">1.</p>
+              </ion-col>
+              <ion-col size="4">
+                <p class="text-xs  text-black">Nita Patil</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">Sp784512</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="text-xs  text-black">₹ 800</p>
+              </ion-col>
+              <ion-col size="2.5">
+                <p class="text-xs  text-black">25-01-2023</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+</ion-content>

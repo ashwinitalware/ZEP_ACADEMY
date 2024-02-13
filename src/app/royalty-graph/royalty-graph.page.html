@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Achiever Graph</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="border border-gray-300 bg-gray-100 mt-2" *ngFor="let level of staticLevels">
+      <ion-col size="6">
+        <ion-item lines="none" color="none">Rank {{level.index}}</ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <p>{{ level.name }}</p>
+        <p>People Count: {{ level.parent_id_count }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> All Subscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="p-2">
+    <div style="background: url('../../assets/2.png') no-repeat center/cover fixed;" class="rounded-3xl p-2 bg-white shadow-md border-b-2 border-blue-600 mt-2" *ngFor="let subscription of allsubscription">
+      <ion-row class="mt-2 pl-1 pr-1">
+        <ion-col size="12">
+          <p class="font-bold text-white text-3xl border-b pb-2 border-dashed border-white">{{subscription.subscriber_name}}</p>
+          <div class="flex justify-between mt-2">
+            <p><span class="text-white text-sm">Price</span><br>
+              <span  class="text-white text-2xl"><b>₹ {{subscription.value}}</b></span>
+            </p>
+            <p>
+              <span class="text-white text-xs">Validity</span>
+              <br>
+              <span  class="text-white text-2xl"><b>{{subscription.validity}} days</b></span>
+            </p>
+          </div>
+
+       <div class="mt-4" (click)="addsubscription(subscription.id)" >
+        <ion-button expand="block" shape="round" fill="outline" color="light">
+          Get Subscription
+        </ion-button>
+       </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

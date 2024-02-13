@@ -1,0 +1,170 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="pr-2">
+    <ion-title class="text-white">Dashboard</ion-title>
+    <p slot="end" routerLink="/subscription"
+      class="text-xs pr-2 text-red-600 bg-white border border-white rounded-full p-1 pl-2 pr-2 font-bold">Get Subscription
+    </p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container #swiper (slidechange)="swiperSlideChanged($event)" [loop]="true">
+    <swiper-slide *ngFor="let image of allslider">
+      <div class="p-2">
+        <img class="rounded-md" src="{{image.image?this.url.imageUrl+'/'+image.image: 'assets/.png'}}">
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <ion-grid class="p-2">
+    <ion-row class="p-2 rounded-md" [ngStyle]="rowStyle">
+      <ion-col size="3">
+          <a routerLink="/passbook">
+            <div class="text-center">
+              <ion-icon class="text-white" name="clipboard-outline"></ion-icon>
+              <p class="text-white text-sm" style="font-size: 12px;">Passbook</p>
+            </div>
+          </a>
+      </ion-col>
+
+      <ion-col size="3">
+        <a routerLink="/Account">
+          <div class="text-center">
+            <ion-icon class="text-white" name="wallet-outline"></ion-icon>
+            <p class="text-white text-sm" style="font-size: 12px;">Withdrawal</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="3">
+        <a routerLink="/newregistration">
+          <div class="text-center">
+            <ion-icon class="text-white" name="people-outline"></ion-icon>
+            <p class="text-white text-sm" style="font-size: 12px;">Registration</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="3">
+        <div class="text-center" (click)="socialshare()">
+          <ion-icon class="text-white" name="share-social-outline"></ion-icon>
+          <p class="text-white text-sm" style="font-size: 12px;">Refer</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row class="p-2">
+
+      <ion-col size="4" >
+          <div class="text-center border border-red-500 rounded-md p-2 bg2" [routerLink]="hasSubscription ? '/level-status' : null">
+            <div class="flex justify-center">
+              <img src="assets/statistics.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Level-Status Graph</p>
+          </div>
+      </ion-col>
+ 
+      <ion-col size="4"   routerLink="/level-status-bv">
+     
+          <div class="text-center border border-red-500 rounded-md p-2 bg3">
+            <div class="flex justify-center">
+              <img src="assets/statistics.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Level <br>Status </p>
+          </div>
+       
+      </ion-col>
+
+      <ion-col size="4" routerLink="/royalty-graph">
+          <div class="text-center border border-red-500 rounded-md p-2 bg4">
+            <div class="flex justify-center">
+              <img src="assets/scroll.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Royalty <br />Graph</p>
+          </div>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/tsp-achiever">
+          <div class="text-center border border-red-500 rounded-md p-2 bg6">
+            <div class="flex justify-center">
+              <img src="assets/growth.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Achiever</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/shopping-dash">
+          <div class="text-center border border-red-500 rounded-md p-2 bg7">
+            <div class="flex justify-center">
+              <img src="assets/online-shopping.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Shopping</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/gallery">
+          <div class="text-center border border-red-500 rounded-md p-2 bg8">
+            <div class="flex justify-center">
+              <img src="assets/picture.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Gallery</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/income">
+          <div class="text-center border border-red-500 rounded-md p-2 bg9">
+            <div class="flex justify-center">
+              <img src="assets/income.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Income Statement</p>
+          </div>
+        </a>
+      </ion-col>
+
+   
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <div class="text-white rounded-tl-3xl rounded-tr-3xl flex justify-between pt-2 pb-2 bg-footer">
+  
+      <div class="text-center " routerLink="/dashboard" >
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-title style="font-size: x-small;">Home</ion-title>
+      </div>
+
+      <div class="text-center" routerLink="/addsubscription">
+        <ion-icon name="document-outline"></ion-icon>
+        <ion-title style="font-size: x-small;">Subscriptions</ion-title>
+      </div>
+
+      <div class="text-center" routerLink="/myprofile">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-title style="font-size: x-small;">Profile</ion-title>
+      </div>
+
+      <div class="text-center" routerLink="/notification">
+        <ion-icon name="notifications-outline"></ion-icon>
+        <ion-title style="font-size: x-small;">Notification</ion-title>
+      </div>
+
+   
+      <div class="text-center " routerLink="/profile">
+        <ion-icon name="grid-outline"></ion-icon>
+        <ion-title style="font-size: x-small;">More</ion-title>
+      </div>
+    
+  </div>
+</ion-footer>

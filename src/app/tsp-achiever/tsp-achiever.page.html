@@ -1,0 +1,82 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Achiever</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+<div class="p-2">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4.5">
+        <label for="start_date">From</label>
+        <ion-item class="border border-gray-200 rounded-sm"> 
+          <input type="date" id="start_date" name="start_date">
+        </ion-item>
+      </ion-col>
+      <ion-col size="4.5">
+        <label for="end_date">To</label>
+        <ion-item class="border border-gray-200 rounded-sm"> 
+          <input type="date" id="end_date" name="end_date">
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <div class="text-center mt-6 rounded-sm" style="background-color: #685dbd; color: white; align-items: center;">
+          <button (click)="fetchData()" class="p-1 pt-3 pb-3 pl-2 pr-2">Show</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="mt-2">
+    <ion-grid class="mt-3">
+      <ion-row class="bg-gray-200">
+        <ion-col size="2">
+          <p class="text-xs font-bold text-black">RankNo.</p>
+        </ion-col>
+        <ion-col size="4">
+          <p class="text-xs font-bold text-black">Member</p>
+        </ion-col>
+        <ion-col size="2.5">
+          <p class="text-xs font-bold text-black">Date</p>
+        </ion-col>
+        <ion-col size="1">
+          <p class="text-xs font-bold text-black">Le. No</p>
+        </ion-col>
+        <ion-col size="2.5">
+          <p class="text-xs font-bold text-black">City</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="border-b border-gray-200" *ngFor="let data of alldata">
+        <ion-col size="2">
+          <p class="text-xs  text-black">{{data.index}}</p>
+        </ion-col>
+        <ion-col size="4">
+          <p class="text-xs  text-black">{{data.name}}</p>
+        </ion-col>
+        <ion-col size="2.5">
+          <p class="text-xs  text-black">{{data.created_at}}</p>
+        </ion-col>
+        <ion-col size="1">
+          <p class="text-xs  text-black"> {{data.level}}</p>
+        </ion-col>
+        <ion-col size="2.5">
+          <p class="text-xs  text-black">{{data.city}}</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
+   
+  </div>
+  
+</div>
+</ion-content>

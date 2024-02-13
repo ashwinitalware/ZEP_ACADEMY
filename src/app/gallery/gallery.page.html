@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="p-2">
+
+    <ion-segment mode="ios" value="current" (ionChange)="segmentChanged($event)" class="bg-amber-400">
+      <ion-segment-button value="current">
+        <ion-label class="font-bold">Gallery</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="pdf">
+        <ion-label class="font-bold">PDF</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div *ngIf="switchTab === 'current'">
+      <div class="p-2" *ngFor="let image of allgallery">
+        <img class="rounded-md" src="{{image.image?this.url.imageUrl2+'/'+image.image: 'assets/.png'}}">
+      </div>
+    </div>
+
+    <div *ngIf="switchTab === 'pdf'">
+      <div class="border-blue-400 border rounded-lg bg-white flex justify-between p-2 mt-4">
+        <img width="50" height="50" src="assets/pdf.png" alt="">
+        <div class="flex items-center">
+          <ion-button color="tertiary" size="small" expand="block">
+            <ion-icon name="cloud-download"></ion-icon> &nbsp; Download
+          </ion-button>
+        </div>
+
+      </div>
+      <!-- <div class="p-2" *ngFor="let image of allgallery">
+      <img class="rounded-md" src="{{image.image?this.url.imageUrl2+'/'+image.image: 'assets/.png'}}">
+    </div> -->
+    </div>
+
+  </div>
+</ion-content>

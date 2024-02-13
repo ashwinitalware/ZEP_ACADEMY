@@ -1,0 +1,845 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Level Status</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="p-2">
+    <ion-grid>
+      <ion-row *ngFor="let subscriber of allsubscription">
+        <ion-col size="4.5">
+          <ion-button color="dark" expand="block">
+            Levels
+          </ion-button>
+        </ion-col>
+        <ion-col size="2.5">
+          <div align="center">
+            <p class="bg-yellow-800 p-2 rounded-md text-white text-align ">{{subscriber.total_count}}</p>
+            <p class="text-xs ">Total</p>
+          </div>
+        </ion-col>
+        <ion-col size="2.5">
+          <div align="center">
+            <p class="bg-yellow-800 p-2 rounded-md text-white text-align">{{subscriber.joined_count}}</p>
+            <p class="text-xs ">Total Active</p>
+          </div>
+        </ion-col>
+        <ion-col size="2.5">
+         <div align="center">
+          <p class="bg-yellow-800 p-2 rounded-md text-white text-align">{{subscriber.unjoined_count}}</p>
+          <p class="text-xs ">Total Free</p>
+         </div>
+        </ion-col>
+
+  
+               <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-blue-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">1</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-gray-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">2</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-green-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">3</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-pink-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">4</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-yellow-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">5</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-sky-400">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">6</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-indigo-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">7</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-black">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">8</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-blue-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">9</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-gray-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">10</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-green-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">11</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-pink-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">12</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-yellow-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">13</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-sky-400">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">14</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-indigo-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">15</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-black">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">16</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-blue-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">17</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-gray-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">18</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-green-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">19</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+            <ion-row class="rounded rounded-md">
+      
+              <ion-col size="10" class="bg-pink-600">
+                <div class="flex justify-between">
+                  <p class="text-white pl-2">20</p>
+                  <p class="text-white pl-20">0</p>
+                  <p class="text-white pr-10">0</p>
+                </div>
+              </ion-col>
+      
+              <ion-col size="2" class="border border-red-600 rounded-tr-md rounded-br-md">
+                <div class="text-right pr-5">0</div>
+              </ion-col>
+      
+            </ion-row>
+          </div>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+
+
+    <!-- <ion-row class="pl-1">
+      <ion-col size="12">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="8" class="bg-blue-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">1</p>
+                <p class="text-white pr-2">0</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-gray-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">2</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-green-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">3</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-pink-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">4</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-yellow-700">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">5</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-sky-400">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">6</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-indigo-700">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">7</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-black">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">8</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-blue-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">9</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-gray-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">10</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-green-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">11</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-pink-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">12</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-yellow-700">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">13</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-sky-400">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">14</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-indigo-700">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">15</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-black">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">16</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-blue-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">17</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-gray-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">18</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-green-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">19</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="8">
+        <div style="border-radius: 10px; overflow: hidden; padding-right: 5px;">
+          <ion-row class="rounded rounded-md pr-10">
+    
+            <ion-col size="9" class="bg-pink-600">
+              <div class="flex justify-between">
+                <p class="text-white pl-2">20</p>
+                <p class="text-white pr-2">0</p>
+              </div>
+            </ion-col>
+    
+            <ion-col size="3" class="border border-red-600 rounded-tr-md rounded-br-md">
+              <div class="text-right">0</div>
+            </ion-col>
+    
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row> -->
+
+  </div>
+</ion-content>

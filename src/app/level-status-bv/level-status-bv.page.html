@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-md text-white">Level Status</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-item class="border border-gray-300 mt-2">
+      <ion-select label="Select Level" placeholder="Select Level"  [(ngModel)]="selectedLevel" (ionChange)="onLevelChange($event)">
+        <ion-select-option value="1">Level 1</ion-select-option>
+        <ion-select-option value="2">Level 2</ion-select-option>
+        <ion-select-option value="3">Level 3</ion-select-option>
+        <ion-select-option value="4">Level 4</ion-select-option>
+        <ion-select-option value="5">Level 5</ion-select-option>
+        <ion-select-option value="6">Level 6</ion-select-option>
+        <ion-select-option value="7">Level 7</ion-select-option>
+        <ion-select-option value="8">Level 8</ion-select-option>
+        <ion-select-option value="9">Level 9</ion-select-option>
+        <ion-select-option value="10">Level 10</ion-select-option>
+        <ion-select-option value="11">Level 11</ion-select-option>
+        <ion-select-option value="12">Level 12</ion-select-option>
+        <ion-select-option value="13">Level 13</ion-select-option>
+        <ion-select-option value="14">Level 14</ion-select-option>
+        <ion-select-option value="15">Level 15</ion-select-option>
+        <ion-select-option value="16">Level 16</ion-select-option>
+        <ion-select-option value="17">Level 17</ion-select-option>
+        <ion-select-option value="18">Level 18</ion-select-option>
+        <ion-select-option value="19">Level 19</ion-select-option>
+        <ion-select-option value="20">Level 20</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+  </ion-grid>
+
+  <!-- <div *ngIf="requestedUser" class="border-blue-400 rounded-sm p-1">
+    <ion-row>
+      <ion-col size="3">
+        <p>name</p>
+      </ion-col>
+      <ion-col size="1">:</ion-col>
+      <ion-col size="8">{{ requestedUser.name }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <p>sponcer_code</p>
+      </ion-col>
+      <ion-col size="1">:</ion-col>
+      <ion-col size="8">{{ requestedUser.sponcer_code }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <p>City</p>
+      </ion-col>
+      <ion-col size="1">:</ion-col>
+      <ion-col size="8">{{ requestedUser.city }}</ion-col>
+    </ion-row>
+  </div> -->
+
+<div class="p-1">
+  <div *ngFor="let user of usersWithRequestedLevel" class="border-gray-300 border rounded-md mt-2 p-1">
+    <ion-row>
+      <ion-col size="4">
+        <p class="text-sm"><b>Name</b></p>
+      </ion-col>
+      <ion-col size="1"><b>:</b></ion-col>
+      <ion-col size="7" class="text-gray-500">{{ user.name }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <p class="text-sm"><b>Sponcer Code</b></p>
+      </ion-col>
+      <ion-col size="1"><b>:</b></ion-col>
+      <ion-col size="7" class="text-gray-500">{{ user.sponcer_code }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <p class="text-sm"><b>City</b></p>
+      </ion-col>
+      <ion-col size="1"><b>:</b></ion-col>
+      <ion-col size="7" class="text-gray-500">{{ user.city }}</ion-col>
+    </ion-row>
+  </div>
+</div>
+
+
+</ion-content>
