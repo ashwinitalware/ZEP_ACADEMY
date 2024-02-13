@@ -13,8 +13,8 @@ import { NgForm } from '@angular/forms';
 })
 export class RegistrationPage implements OnInit {
 
-  zep_id:any;
-  sponcer_code:any;
+  zep_id :any;
+  sponcer_code : any;
   name:any;
   email:any;
   address:any;
